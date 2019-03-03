@@ -67,7 +67,7 @@ if(args.npy_mel):
 if(args.predict_for_files_in_directory):
 	predicted_values = []
 	for folder in os.listdir(args.predict_for_files_in_directory):
-		print(folder)
+		#print(folder)
 		for file in os.listdir(os.path.join(args.predict_for_files_in_directory, folder)):
 			mel = np.load(os.path.join(args.predict_for_files_in_directory, folder,file))
 			prediction = predict_by_mel(mel, rf_model)
